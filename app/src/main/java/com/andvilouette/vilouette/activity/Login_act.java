@@ -216,7 +216,6 @@ public class Login_act extends AppCompatActivity {
                     public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                         super.onFailure(statusCode, headers, throwable, errorResponse);
                         success = false;
-                        //                       responseString = errorResponse.toString();
                         android.util.Log.d("response", errorResponse.toString());
                     }
 
