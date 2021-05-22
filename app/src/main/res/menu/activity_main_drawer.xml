@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/circle_nav"
+            android:title="Account" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/circle_nav"
+            android:title="My Avatar" />
+        <item
+            android:id="@+id/nav_slideshow1"
+            android:icon="@drawable/circle_nav"
+            android:title="Scan" />
+        <item
+            android:id="@+id/nav_slideshow2"
+            android:icon="@drawable/circle_nav"
+            android:title="Manual Entry" />
+        <item
+            android:id="@+id/nav_slideshow3"
+            android:icon="@drawable/circle_nav"
+            android:title="Purchases" />
+        <item
+            android:id="@+id/nav_slideshow4"
+            android:icon="@drawable/circle_nav"
+            android:title="Terms &amp; condition" />
+        <item
+            android:id="@+id/nav_slideshow5"
+            android:icon="@drawable/circle_nav"
+            android:title="Help" />
+        <item
+            android:id="@+id/nav_Logout"
+            android:icon="@drawable/circle_nav"
+            android:title="Logout" />
+    </group>
+</menu>

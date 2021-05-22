@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.Login_act">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="346dp"
+            android:layout_height="166dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/vi_image"></ImageView>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="USERNAME"
+                   android:textSize="15sp"
+                   android:fontFamily="@font/myriad_pro_regular"
+                   android:layout_marginLeft="15dp"
+                   android:textColor="@color/grey"
+                   />
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:inputType="text|textCapWords"
+                        android:maxLines="1"
+                        android:fontFamily="@font/myriad_pro_regular"
+
+                        android:maxLength="30"
+                        android:textColor="@color/grey" />
+
+
+                 <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="PASSWORD"
+                     android:fontFamily="@font/myriad_pro_regular"
+
+                     android:textSize="15sp"
+                     android:layout_marginLeft="15dp"
+
+                     android:textColor="@color/grey"
+
+                     />
+
+
+                    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                        android:id="@+id/etPassword"
+                        style="@style/Widget.AppCompat.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:background="@null"
+                        android:drawablePadding="8dp"
+                        android:padding="5dp"
+                        android:fontFamily="@font/myriad_pro_regular"
+
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvForgotPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:fontFamily="@font/myriad_pro_regular"
+
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="189dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#d9e021"
+                    android:fontFamily="@font/myriad_pro_regular"
+                    android:padding="5dp"
+                    android:paddingLeft="20dp"
+                    android:text="LOG IN"
+                    android:id="@+id/login"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Don’t have account?"
+                        android:fontFamily="@font/myriad_pro_regular"
+
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="SIGN UP"
+                        android:id="@+id/signup"
+                        android:fontFamily="@font/myriad_pro_regular"
+
+                        android:textColor="@color/appcolor"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
