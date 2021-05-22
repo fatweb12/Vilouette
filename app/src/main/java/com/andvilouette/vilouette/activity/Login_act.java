@@ -279,7 +279,6 @@ public class Login_act extends AppCompatActivity {
         @Override
         protected void onPostExecute(final Boolean success) {
             dialog.cancel();
-            //pbLoading.setVisibility(View.GONE);
             if (success) {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(Login_act.this);
@@ -294,7 +293,6 @@ public class Login_act extends AppCompatActivity {
 
                     String userid = newUser.getId();
 
-                    // Toast.makeText(SignIn_act.this, "" + username + passwrd + email + firstname, Toast.LENGTH_SHORT).show();
                     SharedPreferences sp = getSharedPreferences("save_data", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sp.edit();
                     editor.putString("name", username);
