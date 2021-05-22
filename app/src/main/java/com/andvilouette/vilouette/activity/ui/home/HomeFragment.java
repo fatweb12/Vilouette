@@ -258,7 +258,6 @@ public class HomeFragment extends Fragment {
         @Override
         protected void onPostExecute(final Boolean success) {
             dialog.cancel();
-            //pbLoading.setVisibility(View.GONE);
 
         }
 
