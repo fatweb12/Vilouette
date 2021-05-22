@@ -292,7 +292,6 @@ public class Login_act extends AppCompatActivity {
                     String email = newUser.getEmailAddress();
 
                     String userid = newUser.getId();
-
                     SharedPreferences sp = getSharedPreferences("save_data", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sp.edit();
                     editor.putString("name", username);
