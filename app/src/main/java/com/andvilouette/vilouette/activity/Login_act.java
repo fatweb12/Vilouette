@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -57,30 +58,20 @@ public class Login_act extends AppCompatActivity {
         btn_login = findViewById(R.id.login);
         tvforgotPass= findViewById(R.id.tvForgotPassword);
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               /* Intent in= new Intent(getApplicationContext(),Homenav_act.class);
-                startActivity(in);*/
-                attemptLogin();
-            }
+        btn_login.setOnClickListener(v -> {
+
+            attemptLogin();
         });
-        tvforgotPass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent(getApplicationContext(), Forgotpassword_act.class);
-                startActivity(in);
-            }
+        tvforgotPass.setOnClickListener(v -> {
+            Intent in = new Intent(getApplicationContext(), Forgotpassword_act.class);
+            startActivity(in);
         });
 
 
         SignUP = findViewById(R.id.signup);
-        SignUP.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent(getApplicationContext(), Signup_Act.class);
-                startActivity(in);
-            }
+        SignUP.setOnClickListener(v -> {
+            Intent in = new Intent(getApplicationContext(), Signup_Act.class);
+            startActivity(in);
         });
     }
 
@@ -128,10 +119,8 @@ public class Login_act extends AppCompatActivity {
             dlgAlert.create().show();
 
             dlgAlert.setPositiveButton("Ok",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
+                    (dialog, which) -> {
 
-                        }
                     });
             focusView = edt_passwrd;
             cancel = true;
@@ -155,7 +144,6 @@ public class Login_act extends AppCompatActivity {
         final String PASSWORD_PATTERN =
                 "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})";
 
-        /*  final String PASSWORD_PATTERN = ("[a-zA-Z0-9\\!\\@\\#\\$]{8,24}");*/
         pattern = Pattern.compile(PASSWORD_PATTERN);
         matcher = pattern.matcher(password);
 
@@ -164,6 +152,7 @@ public class Login_act extends AppCompatActivity {
     }
 
 
+    @SuppressLint("StaticFieldLeak")
     public class UserLogin extends AsyncTask<Void, Void, Boolean> {
 
         private final String mUsername;
@@ -220,7 +209,7 @@ public class Login_act extends AppCompatActivity {
                         super.onFailure(statusCode, headers, responseString, throwable);
                         success = false;
                         responseString = response;
-                        android.util.Log.d("response", responseString.toString());
+                        android.util.Log.d("response", responseString);
                     }
 
                     @Override
